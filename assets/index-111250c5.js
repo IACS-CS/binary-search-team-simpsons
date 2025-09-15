@@ -210,4 +210,9 @@ if (gender === true) {
     {ti.output("ABE!");
 
   }
-}
+} else {
+  let saxophone = await ti.promptYesOrNo("Do you like the saxophone?");
+  if (saxophone === true) {
+    ti.output("LISA!");
+  }
+  }

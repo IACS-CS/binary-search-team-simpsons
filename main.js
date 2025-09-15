@@ -10,10 +10,15 @@ let gender = await ti.promptYesOrNo("Are you a boy?");
 if (gender === true) {
   let work = await ti.promptYesOrNo("Do you have a j*b?");
   if (work === true) {
-    ti.output("HOMER!")
+    ti.output("HOMER!");
     
   } else 
-    {ti.output("ABE!")
+    {ti.output("ABE!");
 
   }
-} 
+} else {
+  let saxophone = await ti.promptYesOrNo("Do you like the saxophone?")
+  if (saxophone === true) {
+    ti.output("LISA!")
+  }
+  }

@@ -10,16 +10,24 @@ let gender = await ti.promptYesOrNo("Are you a boy?");
 if (gender === true) {
   let work = await ti.promptYesOrNo("Do you have a j*b?");
   if (work === true) {
-    ti.output("HOMER!");
-    
+    ti.output("HOMER!"); 
   } else 
-    {ti.output("ABE!");
-
+    { let skateboard = await ti.promptYesOrNo("Do you like skateboarding?"); 
+      if (skateboard === true) {ti.output("BART!");
+      } else {
+        let Old = await ti.promptYesOrNo("Do you feel old?");
+        if (Old === true) {
+          ti.output("ABE!");
+        } else {
+      ti.output("SANTA'S LITTLE HELPER!");
+    }
+      }
   }
 } else {
   let saxophone = await ti.promptYesOrNo("Do you like the saxophone?")
   if (saxophone === true) {
-    ti.output("LISA!")
-    
+    ti.output("LISA!");
+  } else {
+
   }
   }

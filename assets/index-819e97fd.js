@@ -222,17 +222,22 @@ if (gender === true) {
   let Shopping = await ti.promptYesOrNo("Do you go shopping?");
   if (Shopping === true) {
     let Adult = await ti.promptYesOrNo("Are you an adult?");
-    if ((Adult === true)) {
+    if (Adult === true) {
       ti.output("MARGE!");
     } else {
       ti.output("MAGGIE!");
     }
   } else {
     let Saxophone = await ti.promptYesOrNo("Do you play the saxophone?");
-    if ((Saxophone === true)) {
+    if (Saxophone === true) {
       ti.output("LISA!");
     } else {
-      ti.output("SNOWBALL!");
+      let living = await ti.promptYesOrNo("Are you alive?");
+      if (living === true) {
+      ti.output("SNOWBALL 1!");
+      } else {
+        ti.output("SNOWBALL 2!");
+      }
     }
   }
 }

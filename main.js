@@ -3,7 +3,7 @@ import { TextInterface } from "text-interface";
 
 let app = document.querySelector("#app");
 // Create a new "Text Interface"
-let ti = new TextInterface(app, "Example Text Interface");
+let ti = new TextInterface(app, "Think of Simpson's family character");
 let name = await ti.prompt("What is your name?");
 ti.output("Hello, " + name);
 let gender = await ti.promptYesOrNo("Are you a boy?");
@@ -14,7 +14,8 @@ if (gender === true) {
   } else {
     let skateboard = await ti.promptYesOrNo("Do you like skateboarding?");
     if (skateboard === true) {
-      ti.output("BART!");
+      ti.output("BART!")
+      ti.showImage("Bart_Simpson_200px.png");
     } else {
       let Old = await ti.promptYesOrNo("Do you have back problems?");
       if (Old === true) {
